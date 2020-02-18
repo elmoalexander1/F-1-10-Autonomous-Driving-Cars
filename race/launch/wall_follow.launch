@@ -1,0 +1,9 @@
+<launch>
+  <!-- <node pkg="race" name="debug_lidar" type="debug_lidar.py" /> -->
+  <node pkg="urg_node" name="urg_node" type="urg_node"/>
+  <node pkg="rosserial_python" name="serial_node" type="serial_node.py" args = "/dev/ttyACM1"/>
+  <node pkg="race" name="talker" type="talker.py" output="screen"/>
+  <node pkg="race" name="killer" type="kill.py"/>
+  <!-- <node pkg="race" name="control" type="control.py" args = "14.0 0.9 20" output="screen"/> -->
+  <!-- <node pkg="race" name="dist_finder" type="dist_finder.py" output="screen"/> -->
+</launch>
